@@ -3,9 +3,9 @@ import React from 'react'
 const Card = ({ item }) => {
     const { photographer, src: { large } } = item
     return (
-        <div className="main">
+        <div>
             <div className="card">
-                <img src={large} alt={photographer} />
+                <div className="image"> <img src={large} alt={photographer} /></div>
                 <a href={large} target="true" rel="noopener noreferrer">{photographer}</a>
             </div>
         </div>

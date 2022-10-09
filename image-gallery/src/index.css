@@ -11,25 +11,48 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 .App {
+  display: flex;
+  flex-direction: column;
+}
+.main {
   margin: 10px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   padding: 1rem;
   gap: 2rem;
 }
+.head {
+  color: blue;
+  margin: 10px;
+  text-align: center;
+}
 .card {
   display: flex;
   flex-direction: column;
-  margin-bottom: 20rem;
-  min-height: 300px;
-  max-height: 300px;
+  margin-bottom: 2rem;
+}
+.image {
+  height: 40vh;
+  overflow: hidden;
 }
 img {
   width: 100%;
-  font-size: 1.2rem;
+  height: 100%;
+  transition: all 0.3s ease;
+  object-fit: cover;
+}
+img:hover {
+  transform: scale(1.25);
 }
 a {
   text-decoration: none;
-  color: black;
+  color: steelblue;
+  padding: 1rem;
+  font-size: 1.2rem;
 }
